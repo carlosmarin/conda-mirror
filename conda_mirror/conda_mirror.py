@@ -125,7 +125,7 @@ def _match_pattern_with_operator(match_val, pattern):
     if pattern.strip().startswith('>='):
         match = vval >= version.parse(pattern[2:].strip())
     elif pattern.strip().startswith('<='):
-        match = vval < version.parse(pattern[2:].strip())
+        match = vval <= version.parse(pattern[2:].strip())
     elif pattern.strip().startswith('>'):
         match = vval > version.parse(pattern[1:].strip())
     elif pattern.strip().startswith('<'):
